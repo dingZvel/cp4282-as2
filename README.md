@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-file MD013 -->
 # CP4282 Gaussian Splatting — Assignment 2 (Training)
 
 Starter code and data for the CP4282 Gaussian Splatting **training** assignment.

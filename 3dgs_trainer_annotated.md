@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-file MD013 MD040-->
 # Annotated Walkthrough: `3dgs_trainer.py`
 
 This walkthrough explains the Assignment 2 trainer skeleton. Everything in the file is described
@@ -24,7 +25,7 @@ That search is ordinary gradient descent:
 Step 3 is the whole of your assignment. Steps 1, 2, 4 and 5 are provided.
 
 | Assignment 1 | Assignment 2 |
-|---|---|
+| --- | --- |
 | Splats fixed, loaded from PLY | Splats are the unknowns being solved for |
 | One render | ~20,000 renders |
 | No loss | Mean squared error against the photograph |
@@ -55,7 +56,7 @@ contains all modules needed by the trainer; it does not depend on an Assignment 
 A single splat is an anisotropic 3D Gaussian with a colour and an opacity. Five parameter groups:
 
 | Stored as | Meaning | Why stored this way |
-|---|---|---|
+| --- | --- | --- |
 | `means` (`vec3`) | Centre in world space | Unconstrained already |
 | `log_scales` (`vec3`) | Log of the three axis lengths | A scale must stay positive; a log can be any real number |
 | `quaternions` (`vec4`) | Orientation | Four numbers instead of a 3×3 matrix with six constraints |
@@ -83,7 +84,7 @@ every optimizer step.
 and rejects unknown keys. Sections:
 
 | Section | Controls |
-|---|---|
+| --- | --- |
 | `paths` | Dataset directory, output PNG, optional initial PLY |
 | `runtime` | `cpu` or `gpu`, random seed |
 | `model` | Image size, splat capacity, initial splat count, background |
@@ -227,7 +228,7 @@ records it actually overlaps. `build_tiles` delegates to `GaussianFirstTileWorks
 produces two arrays:
 
 | Array | Meaning |
-|---|---|
+| --- | --- |
 | `pairs` | Sorted 64-bit keys. Upper bits: tile id and depth. Lower 32 bits: splat index. |
 | `offsets` | Where each tile's run begins in `pairs` |
 

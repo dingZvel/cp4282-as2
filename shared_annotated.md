@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-file MD013 -->
 # Annotated Walkthrough: the `shared/` package
 
 `shared/` holds the code used by more than one program: the Assignment 1 reference renderer and the
@@ -9,7 +10,7 @@ table points you at the source; `trainable_gaussian.py` is the one that needs ex
 covers it in full.
 
 | Module | Used by | Where to read it |
-|---|---|---|
+| --- | --- | --- |
 | `camera.py` | renderer | [`shared/camera.py`](shared/camera.py) |
 | `gaussian_set.py` | renderer, trainer, evaluator | [`shared/gaussian_set.py`](shared/gaussian_set.py) |
 | `profiling.py` | trainer | [`shared/profiling.py`](shared/profiling.py) |
